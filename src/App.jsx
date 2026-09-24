@@ -292,44 +292,62 @@ export default function App() {
         </section>
 
         <section className="section" id="credentials">
-          <SectionHeading
-            eyebrow="Credentials & recognition"
-            title="Continuous learning backed by industry certifications."
+  <SectionHeading
+    eyebrow="Credentials & recognition"
+    title="Continuous learning backed by industry credentials."
+    copy="Professional certifications and technical learning across DevOps, Azure, Google Cloud, and AI."
+  />
+
+  <div className="certifications-grid">
+    {certifications.map((cert) => (
+      <article className="cert-card reveal" key={cert.name}>
+        <div className="cert-badge-wrap">
+          <img
+            className="cert-badge"
+            src={cert.badge}
+            alt={`${cert.name} badge`}
+            loading="lazy"
           />
+        </div>
 
-          <div className="credentials-grid">
-            <div className="credential-panel reveal">
-              <div className="panel-heading">
-                <span className="panel-icon">✓</span>
-                <div>
-                  <p>Professional certifications</p>
-                  <h3>Cloud, DevOps & AI</h3>
-                </div>
-              </div>
-              <div className="credential-list">
-                {certifications.map((cert) => (
-                  <div key={cert}>
-                    <span>✓</span>
-                    <p>{cert}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="cert-body">
+          <p className="cert-issuer">{cert.issuer}</p>
+          <h3>{cert.name}</h3>
+          <span className="cert-type">{cert.type}</span>
 
-            <div className="award-list">
-              {awards.map((award) => (
-                <article className="award-card reveal" key={award.title}>
-                  <span className="award-mark">★</span>
-                  <div>
-                    <p className="award-issuer">{award.issuer}</p>
-                    <h3>{award.title}</h3>
-                    <p>{award.detail}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+          <a
+            className="cert-link"
+            href={cert.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Verify Credential <ExternalIcon />
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div className="recognition-section">
+    <div className="recognition-heading">
+      <p>Recognition</p>
+      <h3>Awards & professional recognition</h3>
+    </div>
+
+    <div className="award-list">
+      {awards.map((award) => (
+        <article className="award-card reveal" key={award.title}>
+          <span className="award-mark">★</span>
+          <div>
+            <p className="award-issuer">{award.issuer}</p>
+            <h3>{award.title}</h3>
+            <p>{award.detail}</p>
           </div>
-        </section>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section className="contact-section" id="contact">
           <div className="contact-card reveal">
