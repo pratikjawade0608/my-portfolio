@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Pratik Jawade',
   role: 'DevOps Engineer',
-  experience: '6+ Years',
+  experience: '8+ Years',
   tagline: 'Automating Cloud Delivery. Building Reliable DevOps at Scale.',
   location: 'India',
   email: 'pratikjawade608@gmail.com',
