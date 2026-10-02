@@ -810,7 +810,7 @@ export default function App() {
             <div className="about-copy reveal">
               <p>
                 I&apos;m a DevOps
-                Engineer with 6+ years
+                Engineer with 8+ years
                 of experience across
                 cloud infrastructure,
                 CI/CD automation,
@@ -1097,7 +1097,7 @@ export default function App() {
         >
           <SectionHeading
             eyebrow="Experience"
-            title="6+ years across enterprise DevOps and cloud delivery."
+            title="8+ years across enterprise DevOps and cloud delivery."
             copy="A progression from hands-on CI/CD and infrastructure automation to broader cloud, data, integration, solution design, and consulting responsibilities."
           />
 
